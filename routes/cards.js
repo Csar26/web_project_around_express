@@ -8,5 +8,9 @@ const { getCards, storeCards, deleteCards, addLike, removeLike} = require("../co
 
 
 router.get("/cards", getCards);
+router.post('/cards', storeCards);
+router.delete("/cards", deleteCards);
+
+
 
 module.exports = router

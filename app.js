@@ -20,6 +20,13 @@ const userRoutes = require("./routes/users");
 
 const cardsRoutes = require("./routes/cards");
 
+app.use((req, res, next) => {
+  req.user = {
+    _id: '5d8b8592978f8bd833ca8133' // pega el _id del usuario de prueba que creamos en el paso anterior
+  };
+
+  next();
+});
 
 app.use(userRoutes);
 app.use(cardsRoutes);
@@ -37,8 +44,10 @@ app.post('/*', function (req, res) {
 })
 
 app.post('/*', (req, res)=> {
-
+  res.send({message:'NOT FOUND'})
 })
 
 
-app.listen(PORT);
+app.listen(PORT, () => {
+  console.log('ready')
+});

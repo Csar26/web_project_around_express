@@ -1,16 +1,6 @@
-/*const fs = require('fs/promises');
-const path = require("path");
 
-const fileName = path.join(__dirname, '..','data', 'cards.json');
-
-
-const cardsList = (req, res)=> {
-  fs.readFile(fileName).then(content => {
-    //console.log(content.toString());
-    res.send(JSON.parse(content.toString()))
-  })
-}*/
-
+const router = require("express").Router();
+const handleError = require("../utils/handlerError");
 const CardModel = require('../models/cards')
 
 function getCards(req, res){
@@ -29,9 +19,7 @@ function storeCards(req, res){
   CardModel.create({name,link, owner: req.user._id})
   .then(card => {
     res.send(card)
-  }).catch(error => {
-    res.status(403).send(error);
-  })
+  }).catch((error) => handleError( error, res));
 
 }
 
@@ -39,9 +27,7 @@ function deleteCards(req, res){
   const id = req.params.id;
   CardModel.findByIdAndDelete(id).orFail().then(()=> {
     res.send({status: true})
-  }).catch(error => {
-     res.status(404).send(error)
-  })
+  }).catch((error) => handleError( error, res));
 
 }
 
@@ -55,13 +41,18 @@ function addLike(req, res){
   )
    .orFail()
    .then((card) => {})
-   . catch((error) => {});
+   .catch((error) => handleError( error, res));
 
 
 }
 
 function removeLike(req, res){
   const id = req.params.id;
+  CardModel.findByIdAndUpdate(
+    req.params.cardId,
+    { $pull: { likes: req.user._id } }, // elimina _id del array
+    { new: true },
+  )
 
 }
 
