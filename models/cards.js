@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const userSchema = new mongoose.Schema({
+const cardSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
@@ -18,7 +18,14 @@ link: {
     required: true
   },
 
+  likes:{
+    type: [mongoose.Schema.Types.ObjectId],
+    default : [],
+  },
 
+  createAt: {
+    type: Date,
+  },
 
 });
 

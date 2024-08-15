@@ -66,4 +66,4 @@ function removeLike(req, res){
 }
 
 
-module.exports = {cardsList}
+module.exports = {getCards, storeCards, deleteCards, addLike, removeLike};

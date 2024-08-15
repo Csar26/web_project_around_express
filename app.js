@@ -10,7 +10,7 @@ const app = express();
 const {PORT = 3000} = process.env
 
 
-const CardModel = require('./models/cards')
+//const CardModel = require('./models/cards')
 
 
 app.use(express.json());
@@ -25,10 +25,8 @@ app.use(userRoutes);
 app.use(cardsRoutes);
 
 
-app.get('/*', function (req, res) {
-  CardModel.find({}).then(cards => {
-    res.send(cards)
-  })
+app.get('/*', (req, res) => {
+
   res.status(404).send({
     message:'NOT FOUND'
   })
