@@ -4,14 +4,7 @@ mongoose.connect('mongodb://localhost:27017/aroundb');
 
 const app = express();
 
-//const routesUsers = require('./routes/users');
-//const routesCards = require('./routes/cards');
-
 const {PORT = 3000} = process.env
-
-
-//const CardModel = require('./models/cards')
-
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
@@ -22,7 +15,7 @@ const cardsRoutes = require("./routes/cards");
 
 app.use((req, res, next) => {
   req.user = {
-    _id: '5d8b8592978f8bd833ca8133' // pega el _id del usuario de prueba que creamos en el paso anterior
+    _id: '5d8b8592978f8bd833ca8133'
   };
 
   next();

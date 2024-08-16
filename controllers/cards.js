@@ -36,7 +36,7 @@ function addLike(req, res){
 
   CardModel.findByIdAndUpdate(
      id,
-    { $addToSet: { likes: req.user._id } }, // agrega _id al array si aún no está ahí
+    { $addToSet: { likes: req.user._id } },
     { new: true },
   )
    .orFail()
@@ -50,7 +50,7 @@ function removeLike(req, res){
   const id = req.params.id;
   CardModel.findByIdAndUpdate(
     req.params.cardId,
-    { $pull: { likes: req.user._id } }, // elimina _id del array
+    { $pull: { likes: req.user._id } },
     { new: true },
   )
 
