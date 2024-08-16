@@ -6,7 +6,7 @@ Autor:
 César Vivas
 
 Descripción:
-Este proyecto es un entorno de aprendizaje práctico diseñado para profundizar en los fundamentos de Express.js, MongoDB y Mongoose. A través de esta aplicación, podrás construir una sólida base en el desarrollo de APIs RESTful utilizando Node.js y la gestión de bases de datos NoSQL.
+Este proyecto es un entorno de aprendizaje práctico diseñado para profundizar en los fundamentos de Express.js, MongoDB y Mongoose. A través de esta aplicación, se podra construir una sólida base en el desarrollo de APIs RESTful utilizando Node.js y la gestión de bases de datos NoSQL.
 
 Tecnologías Utilizadas:
 Node.js: Entorno de ejecución de JavaScript para el lado del servidor.
