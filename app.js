@@ -32,12 +32,9 @@ app.get('/*', (req, res) => {
   })
 })
 
-app.post('/*', function (req, res) {
-
-})
 
 app.post('/*', (req, res)=> {
-  res.send({message:'NOT FOUND'})
+  res.status(404).send({message:'NOT FOUND'})
 })
 
 
