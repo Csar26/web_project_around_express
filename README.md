@@ -1,42 +1,54 @@
-# Tripleten web_project_around_express
-Título: 
-Proyecto Web con Express: World Around
+🚀 World Around – Express Web Project
+📌 Project Overview
+World Around is a learning-focused Express.js project designed to deepen your understanding of backend development with Node.js, MongoDB, and Mongoose. This application serves as a practical environment for building RESTful APIs while managing NoSQL databases efficiently.
 
-Autor:
-César Vivas
+🛠️ Technologies Used
+Node.js – JavaScript runtime for server-side execution
+Express.js – Minimalist and flexible web framework for Node.js
+MongoDB – Scalable, document-oriented NoSQL database
+Mongoose – Object Data Modeling (ODM) tool for MongoDB, simplifying database interactions
+⚙️ Installation & Setup
+Clone the repository
 
-Descripción:
-Este proyecto es un entorno de aprendizaje práctico diseñado para profundizar en los fundamentos de Express.js, MongoDB y Mongoose. A través de esta aplicación, se podra construir una sólida base en el desarrollo de APIs RESTful utilizando Node.js y la gestión de bases de datos NoSQL.
+bash
+Copy
+Edit
+git clone https://github.com/your-username/WorldAroundExpress.git
+Navigate to the project directory
 
-Tecnologías Utilizadas:
-Node.js: Entorno de ejecución de JavaScript para el lado del servidor.
-Express.js: Framework web minimalista y flexible para Node.js.
-MongoDB: Base de datos NoSQL altamente escalable y orientada a documentos.
-Mongoose: ODM (Object Document Mapper) para MongoDB que simplifica las interacciones con la base de datos.
-
-Instalación y Ejecución:
-Clona el repositorio:
-Bash
-git clone 
-
-
-Instala las dependencias:
-Bash
+bash
+Copy
+Edit
 cd WorldAroundExpress
+Install dependencies
+
+bash
+Copy
+Edit
 npm install
+Set up the database
 
+Create a MongoDB database with the name specified in config.json
+Ensure you have the correct database credentials configured
+Start the server
 
-Configura la base de datos:
-Crea una base de datos en MongoDB con el nombre especificado en config.json.
-Asegúrate de tener las credenciales de acceso correctas.
-Inicia el servidor:
-Bash
+bash
+Copy
+Edit
 npm start
+Access the application at:
 
-
-Accede a la aplicación en http://localhost:3000.
-Estructura del Proyecto:
-models: Define los esquemas de los documentos para MongoDB.
-routes: Contiene las rutas de la API y los controladores asociados.
-controllers: Implementa la lógica de negocio para cada ruta.
-config: Almacena la configuración de la aplicación (base de datos, puerto, etc.).
+🌍 http://localhost:3000
+📂 Project Structure
+graphql
+Copy
+Edit
+/WorldAroundExpress
+│── models/       # Defines MongoDB document schemas
+│── routes/       # API routes and associated controllers
+│── controllers/  # Business logic for each route
+│── config/       # Application configuration (database, port, etc.)
+│── package.json
+│── README.md
+👨‍💻 Author
+César Vivas
